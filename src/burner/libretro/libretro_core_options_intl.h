@@ -43,6 +43,79 @@ extern "C" {
 
 /* RETRO_LANGUAGE_SPANISH */
 
+struct retro_core_option_definition option_defs_es[] = {
+   {
+      "fba2012cps2_cpu_speed_adjust",
+      "Velocidad de la CPU (%)",
+      "Permite overclockear la CPU emulada. Puede reducir las ralentizaciones, pero podría provocar defectos visuales.",
+      {
+         { "100", NULL },
+         { "110", NULL },
+         { "120", NULL },
+         { "130", NULL },
+         { "140", NULL },
+         { "150", NULL },
+         { "160", NULL },
+         { "170", NULL },
+         { "180", NULL },
+         { "190", NULL },
+         { "200", NULL },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "fba2012cps2_controls",
+      "Controls",
+      "Asigna la configuración predeterminada del mando.",
+      {
+         { "gamepad", "Gamepad" },
+         { "arcade",  "Arcade" },
+         { "newgen",  "Modern" },
+         { NULL, NULL },
+      },
+      "gamepad"
+   },
+   {
+      "fba2012cps2_frameskip",
+      "Frameskip",
+      "Omite fotogramas para evitar saturar el búfer de audio (chasquidos en el sonido). Mejora el rendimiento a costa de perder fluidez visual. El valor Automático omite fotogramas según lo aconseje el front-end. El valor Manual utiliza el ajuste Umbral de omisión de fotogramas (%).",
+      {
+         { "disabled", NULL },
+         { "auto",     "Auto" },
+         { "manual",   "Manual" },
+         { NULL, NULL },
+      },
+      "disabled"
+   },
+   {
+      "fba2012cps2_frameskip_threshold",
+      "Frameskip Threshold (%)",
+      "Cuando la omisión de fotogramas esté configurada como Manual, este ajuste especifica el umbral de ocupación del búfer de audio (en porcentaje) por el que se omitirán fotogramas si el valor es inferior. Un valor más elevado reduce el riesgo de chasquidos omitiendo fotogramas con una mayor frecuencia.",
+      {
+         { "15", NULL },
+         { "18", NULL },
+         { "21", NULL },
+         { "24", NULL },
+         { "27", NULL },
+         { "30", NULL },
+         { "33", NULL },
+         { "36", NULL },
+         { "39", NULL },
+         { "42", NULL },
+         { "45", NULL },
+         { "48", NULL },
+         { "51", NULL },
+         { "54", NULL },
+         { "57", NULL },
+         { "60", NULL },
+         { NULL, NULL },
+      },
+      "33"
+   },
+   { NULL, NULL, NULL, {{0}}, NULL },
+};	
+
 /* RETRO_LANGUAGE_GERMAN */
 
 /* RETRO_LANGUAGE_ITALIAN */
